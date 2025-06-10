@@ -594,8 +594,9 @@ import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
 import ChatIcon from '@mui/icons-material/Chat';
 import SendIcon from '@mui/icons-material/Send';
+import server from "../environment";
 
-const server_url = "http://192.168.1.5:8000";
+const server_url = server.prod;
 var connections = {};
 
 const peerConfigConnections = {
