@@ -17,7 +17,12 @@ app.use(cors());
 app.use(express.json({limit :"40kb"}));
 app.use(express.urlencoded({limit:"40kb",extended : true}));
 
+const cors = require('cors');
 
+app.use(cors({
+  origin: 'https://vlinkfront1.onrender.com', // your frontend URL
+  credentials: true // if you use cookies or authentication
+}));
 
 app.get("/home",(req,res)=>{
     return res.json({"hello":"world"})
